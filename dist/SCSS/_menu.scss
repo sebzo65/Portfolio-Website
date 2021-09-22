@@ -1,0 +1,115 @@
+@use "config";
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  background-color: config.$primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .navgrid {
+    opacity: 0.98;
+    border: 2px solid white;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 5vw 5vw 5vw 5vw 5vw 5vw 5vw;
+    grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh;
+    grid-template-areas:
+      "about about about projects projects projects projects"
+      "about about about projects projects projects projects"
+      "about about about projects projects projects projects"
+      "about about about contact contact home home"
+      "about about about contact contact home home"
+      "about about about contact contact home home";
+    row-gap: 15px;
+    column-gap: 15px;
+    height: auto;
+    z-index: 1;
+    transform: translateY(-100%);
+    transform: translateX(100vw);
+    @include config.transition-effect;
+
+    &.open {
+      transform: translateY(0);
+      transform: translateX(0);
+    }
+
+    list-style-type: none;
+
+    &__home {
+      grid-area: home;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px solid white;
+      @include config.transition-effect;
+
+      #home-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px solid white;
+      grid-area: about;
+      @include config.transition-effect;
+
+      #about-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__projects {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px solid white;
+      grid-area: projects;
+      @include config.transition-effect;
+
+      #projects-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px solid white;
+      grid-area: contact;
+      @include config.transition-effect;
+
+      #contact-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
