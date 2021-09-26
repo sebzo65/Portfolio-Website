@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/CSS/main.css" />
+    <title>Sebastian Penedo - Contact Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+      </div>
+      <nav class="nav">
+        <div class="navgrid">
+          <div class="navgrid__home">
+            <!-- <a href="index.html" class="menu-nav__link">Home</a> -->
+            <a href="index.html"
+              ><img id="home-img" src="dist\img\Home-img.jpg"
+            /></a>
+          </div>
+          <div class="navgrid__about">
+            <!-- <a href="about.html" class="menu-nav__link">About Me</a> -->
+            <a href="about.html"
+              ><img id="about-img" src="dist\img\model-1.jpg"
+            /></a>
+          </div>
+          <div class="navgrid__projects">
+            <!-- <a href="projects.html" class="menu-nav__link">My Projects</a> -->
+            <img id="projects-img" src="dist\img\Projects-img.jpg" />
+          </div>
+          <div class="navgrid__contact active">
+            <!--<a href="contact.html" class="menu-nav__link">Contact Me</a>-->
+            <a href="contact.html"
+              ><img id="contact-img" src="dist\img\COntact-img.jpg"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bigGrid">
+        <form
+          class="bigGrid__contactForm"
+          onsubmit="return submitMessage(event);"
+        >
+          <!--Allows for Javascript to be embedded in HTML-->
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            name="email"
+            class="bigGrid__contactForm--email"
+            required
+          />
+
+          <label for="fullName">Full Name:</label>
+          <input
+            type="text"
+            name="fullName"
+            class="bigGrid__contactForm--fullName"
+          />
+
+          <p>Reason for getting in touch</p>
+
+          <label>
+            <input
+              name="reason"
+              value="Talk about projects"
+              type="radio"
+              class="input-radio"
+              checked
+            />Talk about projects
+          </label>
+
+          <label>
+            <input
+              name="reason"
+              value="Get to know me better"
+              type="radio"
+              class="input-radio"
+              checked
+            />Get to know me better
+          </label>
+
+          <label>
+            <input
+              name="reason"
+              value="Interested in hiring me"
+              type="radio"
+              class="input-radio"
+              checked
+            />Interested in hiring me
+          </label>
+
+          <label for="comment">Comment:</label>
+          <textarea
+            name="comment"
+            class="bigGrid__contactForm--comment"
+            rows="3"
+            cols="20"
+            required
+          >
+                    Leave your comment here
+                </textarea
+          >
+          <div class="bigGrid__contactForm__buttons">
+            <button class="bigGrid__contactForm--clear">Clear</button>
+
+            <input type="submit" class="bigGrid__contactForm--submit" />
+          </div>
+        </form>
+      </section>
+      <footer class="pageFooter">
+        <div class="pageFooter__social-icons">
+          <a href="#!">
+            <i class="fas fa-envelope fa-2x"></i>
+            <i class="fab fa-linkedin fa-2x"></i>
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          &copy; Copyright 2021
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/33332611dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/dist/JS/main.js"></script>
+    <script type="text/javascript" src="dist/JS/contact.js"></script>
+  </body>
+</html>

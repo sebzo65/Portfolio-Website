@@ -1,0 +1,49 @@
+@use "config";
+@use "home";
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  &__features {
+    margin-top: 120px;
+
+    &__grid {
+      display: flex;
+      justify-content: center;
+      border: 1px solid white;
+
+      &--icon {
+        height: 175px;
+        width: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: config.$secondary-color;
+      }
+
+      .desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+        width: 80vw;
+
+        ul {
+          line-height: 2em;
+
+          li > #projects-link {
+            text-decoration: none;
+            color: config.$secondary-color;
+
+            &:hover {
+              opacity: 0.5;
+              @include config.transition-effect;
+            }
+          }
+        }
+      }
+    }
+  }
+}

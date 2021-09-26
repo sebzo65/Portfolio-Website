@@ -2,13 +2,14 @@
 @use "burger";
 @use "menu";
 @use "home";
+@use "about";
+@use "contact";
 
 body {
   background-color: config.$primary-color;
   color: white;
-  height: 100vh;
+  height: 80vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 2;
 }
 
 h1,
@@ -17,15 +18,22 @@ h3 {
   font-weight: 500;
 }
 
-.social-icons {
-  text-align: left;
+.pageFooter {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: space-between;
 
-  a {
-    color: config.$secondary-color;
-    text-decoration: none;
+  &__social-icons {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    a {
+      color: config.$secondary-color;
+      text-decoration: none;
 
-    i:hover {
-      opacity: 0.3;
+      i:hover {
+        opacity: 0.3;
+        @include config.transition-effect;
+      }
     }
   }
 }

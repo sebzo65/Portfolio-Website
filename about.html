@@ -4,53 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Portfolio-Website/dist/CSS/main.css" />
-    <title>About - Sebastian Penedo</title>
+    <link rel="stylesheet" href="dist/CSS/main.css" />
+    <title>Sebastian Penedo - About</title>
   </head>
   <body>
     <header>
       <div class="menu-btn">
         <span class="menu-btn__burger"></span>
       </div>
-
       <nav class="nav">
-        <ul class="menu-nav">
-          <li class="menu-nav__item">
-            <a href="index.html" class="menu-nav__link">Home</a>
-          </li>
-          <li class="menu-nav__item active">
-            <a href="about.html" class="menu-nav__link">About Me</a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="projects.html" class="menu-nav__link">My Projects</a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="contact.html" class="menu-nav__link">Contact Me</a>
-          </li>
-        </ul>
+        <div class="navgrid">
+          <div class="navgrid__home">
+            <!-- <a href="index.html" class="menu-nav__link">Home</a> -->
+            <a href="index.html"
+              ><img id="home-img" src="dist\img\Home-img.jpg"
+            /></a>
+          </div>
+          <div class="navgrid__about active">
+            <!-- <a href="about.html" class="menu-nav__link">About Me</a> -->
+            <a href="about.html"
+              ><img id="about-img" src="dist\img\model-1.jpg"
+            /></a>
+          </div>
+          <div class="navgrid__projects">
+            <!-- <a href="projects.html" class="menu-nav__link">My Projects</a> -->
+            <img id="projects-img" src="dist\img\Projects-img.jpg" />
+          </div>
+          <div class="navgrid__contact">
+            <!--<a href="contact.html" class="menu-nav__link">Contact Me</a>-->
+            <a href="contact.html"
+              ><img id="contact-img" src="dist\img\COntact-img.jpg" /></a>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="about">
-        <div class="about_bio-image"></div>
-        <h2 class="text-secondary">BIO</h2>
-        <div class="social-icons">
+      <div class="container">
+        <section class="container__features">
+          <div class="container__features__grid">
+            <div class="container__features__grid--icon"><i class="fas fa-5x fa-graduation-cap"></i></div>
+            <div class="desc">
+              <h2>Education & Professional Experience</h2>
+              <ul>
+                <li>Experience working as a Project Co-ordinator and Management Trainee at Metal Manufacturers, an electrical wholesaler</li>
+                <li>Educational background in Arts & Business. Bachelor of International & Global Studies (International Relations & Japanese Studies), Master of Commerce (International Business & Business Economics) at the University of Sydney</li>
+            </div>
+          </div>
+          <div class="container__features__grid">
+            <div class="container__features__grid--icon"><i class="fas fa-5x fa-basketball-ball"></i></div>
+            <div class="desc">
+              <h2>Hobbies & Interests</h2>
+              <ul>
+                <li>Learning about new technologies & working on coding projects</li>
+                <li>Reading non-fiction books on history, science & geopolitics</li>
+                <li>Boardgames & barbeques</li>
+                <li>Learning the piano</li>
+              </ul>
+            </div>
+          </div>
+          <div class="container__features__grid">
+            <div class="container__features__grid--icon">
+              <i class="fas fa-5x fa-award" aria-hidden="true"></i>
+            </div>
+            <div class="desc">
+              <h2>Skills & Values</h2>
+              <ul>
+                <li>Organisational & Time Management Skills</li>
+                <li>Experience working with a variety of tech stacks & languages. See <a id="projects-link"href="projects.html">Projects page</a> for more.</li>
+                <li>Team Work & Communication</li>
+                <li>Positive attitude to lifelong learning & consistently pushing myself to accomplish more challenging tasks</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      <footer class="pageFooter">
+        <div class="pageFooter__social-icons">
           <a href="#!">
-            <i class="fab fa-twitter fa-2x"></i>
-            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fas fa-envelope fa-2x"></i>
             <i class="fab fa-linkedin fa-2x"></i>
             <i class="fab fa-github fa-2x"></i>
           </a>
+          &copy; Copyright 2021
         </div>
-
-        <footer>&copy; Copyright 2021</footer>
-      </section>
+      </footer>
     </main>
     <script
       src="https://kit.fontawesome.com/33332611dc.js"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="/dist/JS/main.js"></script>
   </body>
 </html>

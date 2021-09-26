@@ -1,0 +1,49 @@
+@use "config";
+
+.bigGrid {
+  display: flex;
+  justify-content: center;
+
+  &__contactForm {
+    display: flex;
+    flex-flow: wrap column;
+
+    border: 4px solid config.$secondary-color;
+    padding: 20px;
+    margin: 20px;
+    width: 40vw;
+    height: 65vh;
+
+    &--email {
+      height: 3vh;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    &--fullName {
+      height: 3vh;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    &--comment {
+      height: 20vh;
+      width: auto;
+      margin: 10px 0;
+    }
+
+    &__buttons {
+      display: flex;
+
+      &--clear {
+        height: 50px;
+        width: 100px;
+      }
+
+      &--submit {
+        height: 50px;
+        width: 100px;
+      }
+    }
+  }
+}
